@@ -1,0 +1,72 @@
+slots:
+  country:
+    type: text
+  date:
+    type: text
+  sport:
+    type: text
+  cuisine:
+    type: text
+  location:
+    type: text
+  name:
+    type: text
+ 
+ 
+
+
+entities:
+- name
+- date
+- location
+- sport
+- cuisine
+- country
+
+intents:
+ - greet
+ - affirm
+ - restaurant_search
+ - goodbye
+ - openhistory
+ - fuck
+ - showlive
+ - showscore
+ 
+
+templates:
+  utter_greet:
+  - text: "Hey! How are you baby?"
+    buttons:
+    - title: "great"
+      payload: "great"
+    - title: "super sad"
+      payload: "super sad"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://pixabay.com/en/frog-frog-prince-prince-figure-2240764/"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+  
+  utter_affirm:
+  - text: "I dont care go to hell! why you are telling me?"
+
+actions:
+  - utter_greet
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_happy
+  - utter_goodbye
+  - utter_affirm
+  - actions.Actionopenhistory
+  - actions.Actionshowlive
+  - actions.Actionshowscore
+  - actions.Actionfuck
