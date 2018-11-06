@@ -1,0 +1,58 @@
+language: "en_core_web_md"
+"ner_crf": {
+    "BILOU_flag": false,
+    "features": [
+      ["low", "title", "upper", "pos", "pos2"],
+      ["bias", "low", "word3", "word2", "upper", "title", "digit", "pos", "pos2", "pattern"],
+      ["low", "title", "upper", "pos", "pos2"]],
+    "max_iterations": 200,
+    "L1_c": 1,
+    "L2_c": 1e-3
+  }
+"intent_classifier_sklearn": {
+    "C": [1, 2, 5, 10, 20, 100],
+    "gamma": [0.01,0.001, 0.0001],
+    "kernel": "rbf"
+  }
+"intent_featurizer_count_vectors": {
+    "token_pattern": '(?u)\b\w\w+\b',
+    "strip_accents": None,
+    "stop_words": {'can','you','go','new','about','inform','describe','me','are','am','is','i','patient','patients',"patient's",'would','know','like','the','of','for','please','kindly','a','an','do','did','have','had','was','were','hey','to','this','that','as','my','lets',"let's",'be','been'},
+    "min_df": 1,
+    "max_df": 1.0,
+    "min_ngram": 2,
+    "max_ngram": 3,
+    "max_features": None,
+    "lowercase": true,
+    "OOV_token": None,
+    "OOV_words": []
+}
+"intent_classifier_tensorflow_embedding": {
+    "num_hidden_layers_a": 6,
+    "hidden_layer_size_a": [512,256,256,256,128,64],
+    "num_hidden_layers_b": 0,
+    "hidden_layer_size_b": [],
+    "batch_size": [8,16,32],
+    "epochs": 400,
+    "embed_dim": 40,
+    "mu_pos": 0.8,
+    "mu_neg": -0.5,  
+    "similarity_type": "cosine", 
+    "num_neg": 30,
+    "use_max_sim_neg": true, 
+    "C2": 0.002,
+    "C_emb": 0.8,
+    "droprate": 0.1,
+    "evaluate_every_num_epochs": 10, 
+    "evaluate_on_num_examples": 1000
+  } 
+pipeline:
+- name: "nlp_spacy"
+- name: "tokenizer_spacy"
+- name: "ner_spacy"
+- name: "ner_synonyms"
+- name: "ner_crf"
+- name: "intent_entity_featurizer_regex"
+- name: "intent_featurizer_count_vectors"
+- name: "intent_classifier_tensorflow_embedding"
+  case_sensitive: false
