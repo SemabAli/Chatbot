@@ -1,0 +1,283 @@
+slots:
+  PERSON:
+    type: unfeaturized
+  DATE:
+    type: unfeaturized
+  ALLERGY:
+    type: unfeaturized
+  DIAGNOSIS:
+    type: unfeaturized
+  TIME:
+    type: unfeaturized
+
+entities:
+ - PERSON
+ - DATE
+ - ALLERGY
+ - DIAGNOSIS
+ - TIME
+
+intents:
+ - AddAllergy
+ - AddDiagnosis
+ - OpenPatientList
+ - OpenSummary
+ - OpenImmunization
+ - LastImmunized
+ - AllergyCount
+ - OpenLastEncounters
+ - OpenLastLabWork
+ - ReorderLabWork
+ - OpenLastMedication
+ - OpenReorderActiveMedicationForPatient
+ - OpenMedicationPrescribedLastVist
+ - NextVisitForPatient
+ - OpenActivity
+ - OpenProfile
+ - OpenEncounters
+ - AddEncounter
+ - SignTheEncounter
+ - PrintEncounter
+ - OpenVitalSigns
+ - OpenReviewOfSystem
+ - OpenHistory
+ - OpenHPI
+ - SaveHPI
+ - UsePreviousHPI
+ - SaveTemplate
+ - EnterVitalSign
+ - AddClaim
+ - OpenDailyAppointment
+ - OpenWeeklyAppointment
+ - OpenSchedulerSettings
+ - OpenScheduler
+ - OpenTasks
+ - Fuck
+ - Marriage
+ - OpenUnsignedLabResults
+ - OpenUnsignedEncounters
+ - OpenRefillRequests
+ - OpenUnsignedDocuments
+ - CreateTask
+ - PendingTasksCount
+ - OpenMessages
+ - OpenPatientMessages
+ - OpenOfficeMessages
+ - UnreadPatientMessagesCount
+ - UnreadOfficeMessagesCount
+ - OpenReports
+ - Weather
+ - Family
+ - Greeting
+ - OpenCCDAExport
+ - OpenLabSetup
+ - OpenDocumentType
+ - OpenPhysicianQualityReportingSystem
+ - OpenDiagnosisList
+ - OpenProcedureList
+ - OpenImmunizationInventory
+ - OpenMedicationList
+ - OpenOfficeTest
+ - OpenLabsConnectivity
+ - OpenClinicalDecisionSupport
+ - OpenDrugInteractionAlerts
+ - OpenAutoLockSettings
+ - OpenLocationSettings
+ - OpenPracticeSettings
+ - OpenUserManagement
+ - OpenRoleMatrix
+ - OpenAddressBook
+ - OpenImportPatient
+ - OpenFaxSettings
+ - OpenSettings
+ - PrescribeLastMedication
+ - OpenLabOrderTemplate
+ - OpenEncountersOfNextAppointment
+ - NextPatient
+ - CreateClaimForEncounter
+ - ActiveMedicationForPatient
+ - OpenEncountersType
+ - OpenFeeStructure
+ - OpenEPrescriptionForCtrlSubstances
+ - OpenEligibility
+ - OpenBillingSolution
+ - OpenServerClock
+ - OpenPayerList
+ - OpenPhysicalExam
+ - OpenPatientIntakeForm
+ - OpenPatientCommunicate
+ - OpenImmunizationRegistry
+ - OpenICheckinSettings
+ - OpenInviteToPHR
+ - OpenBalanceReminderCalls
+ - TodaysAppointmentsCount
+ - OpenEPrescriptionSetup
+ - OpenAutomatedReminderCalls
+ - OpenUserSetup
+ - Logout
+ - OpenTodaysScheduledPatients
+ - AddPatient
+ - OpenFirstAppointment
+ - OpenFaxes
+ - OpenDocuments
+ - AddAppointment
+ - MarkPatientInactive
+ - DeletePatient
+ - OpenBI
+ - StatusUpdate
+ - UnsignedLabResultsCount
+ - UnsignedEncountersCount
+ - TotalUnreadMessagesCount
+ - RefillRequestsCount
+ - OpenVisitType
+ - OpenPatientLetter
+ - OpenDirectMessages
+ - OpenDashboard
+ - OpenClaims
+ - FirstPatient
+ - OpenAdvanceDirective
+ - OpenAlerts
+ - OpenCancerRegistry
+ - OpenCarePlan
+ - OpenChartNotes
+ - OpenCognitiveStatus
+ - OpenFamilyHistory
+ - OpenFlowSheet
+ - OpenFunctionalStatus
+ - OpenOutgoingReferral
+ - OpenSocialHistory
+ - OpenTemplateProcedure
+ - OpenTemplateSettings
+ 
+actions:
+- actions.ActionDefault
+- actions.ActionOpenSummary
+- actions.ActionOpenImmunization
+- actions.ActionLastImmunized
+- actions.ActionOpenLastEncounters
+- actions.ActionOpenPatientList
+- actions.ActionOpenHistory
+- actions.ActionOpenProfile
+- actions.ActionOpenLastMedication
+- actions.ActionOpenSchedulerSettings
+- actions.ActionOpenHPI
+- actions.ActionOpenReports
+- actions.ActionOpenWeeklyAppointment
+- actions.ActionOpenDailyAppointment
+- actions.ActionAddEncounter
+- actions.ActionOpenMedicationList
+- actions.ActionAllergyCount
+- actions.ActionOpenReorderActiveMedicationForPatient
+- actions.ActionOpenEncounters
+- actions.ActionSignTheEncounter
+- actions.ActionOpenDiagnosisList
+- actions.ActionOpenProcedureList
+- actions.ActionOpenLastLabWork
+- actions.ActionReorderLabWork
+- actions.ActionPendingTasksCount
+- actions.ActionCreateTask
+- actions.ActionUsePreviousHPI
+- actions.ActionSaveHPI
+- actions.ActionOpenCCDAExport
+- actions.ActionOpenLabSetup
+- actions.ActionOpenPhysicianQualityReportingSystem
+- actions.ActionOpenRefillRequests
+- actions.ActionOpenMessages
+- actions.ActionEnterVitalSign
+- actions.ActionOpenVitalSigns
+- actions.ActionOpenMedicationPrescribedLastVist
+- actions.ActionNextVisitForPatient
+- actions.ActionOpenActivity
+- actions.ActionOpenSettings
+- actions.ActionOpenFaxSettings
+- actions.ActionOpenUserManagement
+- actions.ActionOpenPracticeSettings
+- actions.ActionOpenLocationSettings
+- actions.ActionOpenDrugInteractionAlerts
+- actions.ActionOpenClinicalDecisionSupport
+- actions.ActionOpenOfficeTest
+- actions.ActionOpenDocumentType
+- actions.ActionOpenOfficeMessages
+- actions.ActionOpenUnsignedDocuments
+- actions.ActionOpenReviewOfSystem
+- actions.ActionPrintEncounter
+- actions.ActionSaveTemplate
+- actions.ActionAddClaim
+- actions.ActionOpenScheduler
+- actions.ActionOpenTasks
+- actions.ActionOpenUnsignedLabResults
+- actions.ActionOpenUnsignedEncounters
+- actions.ActionOpenRoleMatrix
+- actions.ActionPrescribeLastMedication
+- actions.ActionOpenLabOrderTemplate
+- actions.ActionOpenEncountersOfNextAppointment
+- actions.ActionCreateClaimForEncounter
+- actions.ActionNextPatient
+- actions.ActionActiveMedicationForPatient
+- actions.ActionOpenEncountersType
+- actions.ActionOpenFeeStructure
+- actions.ActionOpenEPrescriptionForCtrlSubstances
+- actions.ActionOpenEligibility
+- actions.ActionOpenBillingSolution
+- actions.ActionOpenPatientMessages
+- actions.ActionOpenServerClock
+- actions.ActionOpenPayerList
+- actions.ActionOpenPhysicalExam
+- actions.ActionOpenPatientIntakeForm
+- actions.ActionOpenLabsConnectivity
+- actions.ActionOpenImmunizationRegistry
+- actions.ActionOpenICheckinSettings
+- actions.ActionOpenInviteToPHR
+- actions.ActionOpenBalanceReminderCalls
+- actions.ActionTodaysAppointmentsCount
+- actions.ActionOpenPatientCommunicate
+- actions.ActionOpenImportPatient
+- actions.ActionOpenAutomatedReminderCalls
+- actions.ActionOpenEPrescriptionSetup
+- actions.ActionOpenUserSetup
+- actions.ActionOpenFaxes
+- actions.ActionOpenFirstAppointment
+- actions.ActionFirstPatient
+- actions.ActionAddPatient
+- actions.ActionOpenTodaysScheduledPatients
+- actions.ActionLogout
+- actions.ActionOpenClaims
+- actions.ActionOpenDashboard
+- actions.ActionOpenDirectMessages
+- actions.ActionOpenPatientLetter
+- actions.ActionOpenVisitType
+- actions.ActionRefillRequestsCount
+- actions.ActionTotalUnreadMessagesCount
+- actions.ActionUnsignedEncountersCount
+- actions.ActionUnsignedLabResultsCount
+- actions.ActionStatusUpdate
+- actions.ActionOpenBI
+- actions.ActionDeletePatient
+- actions.ActionMarkPatientInactive
+- actions.ActionAddAppointment
+- actions.ActionOpenDocuments
+- actions.ActionAddAllergy
+- actions.ActionAddDiagnosis
+- actions.ActionUnreadPatientMessagesCount
+- actions.ActionUnreadOfficeMessagesCount
+- actions.ActionOpenImmunizationInventory
+- actions.ActionOpenAutoLockSettings
+- actions.ActionOpenAddressBook
+- actions.ActionFuck
+- actions.ActionMarriage
+- actions.ActionGreeting
+- actions.ActionFamily
+- actions.ActionWeather
+- actions.ActionOpenAdvanceDirective
+- actions.ActionOpenAlerts
+- actions.ActionOpenCancerRegistry
+- actions.ActionOpenCarePlan
+- actions.ActionOpenChartNotes
+- actions.ActionOpenCognitiveStatus
+- actions.ActionOpenFamilyHistory
+- actions.ActionOpenFlowSheet
+- actions.ActionOpenFunctionalStatus
+- actions.ActionOpenOutgoingReferral
+- actions.ActionOpenSocialHistory
+- actions.ActionOpenTemplateProcedure
+- actions.ActionOpenTemplateSettings
